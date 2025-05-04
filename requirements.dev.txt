@@ -8,6 +8,7 @@ djangorestframework
 djlint
 
 Django
+crispy-bootstrap5
 django-crispy-forms
 django-filter
 django-tables2

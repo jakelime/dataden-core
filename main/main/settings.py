@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "accounts",
     "api",
     "gmailreader",
 ]
@@ -166,3 +167,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MONGODB_NAME = "drf_db"
 MONGODB_CONNX_STR = os.environ.get("MONGODB_CONNX_STR")
+
+# Custom configurations
+AUTH_USER_MODEL = "accounts.CustomUser"
+AUTHENTICATION_BACKENDS = ["accounts.backends.EmailBackend"]
