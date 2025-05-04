@@ -43,15 +43,8 @@ class CustomUser(AbstractUser):
 
     class Meta:
         permissions = (
-            ("is_operator", "Basic operator or technician access"),
-            ("is_engineer", "Engineer level access"),
-            ("is_manager", "Manager level access"),
-            ("is_admin", "Administrator level access"),
-            ("is_mlrs_approver", "MLRS Approver"),
-            ("is_mlrs_endorser", "MLRS Endorser"),
-            ("is_ppc_dept", "PPC department"),
-            ("is_trfm_dept", "Transformations department"),
-            ("is_comm_ops", "CommOps department"),
+            ("gmail.read", "Read emails"),
+            ("gmail.write", "Write emails"),
         )
 
     def __str__(self):
